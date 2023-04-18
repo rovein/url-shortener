@@ -1,4 +1,7 @@
 package com.bobocode.persistence;
 
-public interface ShortenRepository {
+import com.bobocode.persistence.entity.ShortenedUrl;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ShortenUrlRepository extends CrudRepository<ShortenedUrl, String> {
 }

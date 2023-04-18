@@ -1,2 +1,11 @@
-package com.bobocode.service;public interface ShortenUrlService {
+package com.bobocode.service;
+
+import com.bobocode.dto.ShortenUrlRequest;
+
+public interface ShortenUrlService {
+
+    String shortenUrl(ShortenUrlRequest shortenUrlRequest);
+
+    String getOriginalUrl(String shortenUrlId);
+
 }
