@@ -34,8 +34,7 @@ public class ShortUrlController {
     private static URI buildShortenUrl(String shortenUrlId, HttpServletRequest request) {
         String requestUrl = request.getRequestURL().toString();
         int indexOfFirstUrlSlash = StringUtils.indexOf(requestUrl, SLASH, HTTPS.length());
-        String shortenUrl = requestUrl.substring(0, indexOfFirstUrlSlash + 1) + shortenUrlId;
-        return URI.create(shortenUrl);
+        return URI.create(requestUrl.substring(0, indexOfFirstUrlSlash + 1) + shortenUrlId);
     }
 
     @GetMapping("/short/{shortenUrlId}")
